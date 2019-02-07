@@ -1,7 +1,10 @@
 package ru.javawebinar.topjava.model;
 
+import lombok.ToString;
+
 import java.time.LocalDateTime;
 
+@ToString
 public class UserMealWithExceed {
     private final LocalDateTime dateTime;
 
@@ -16,5 +19,12 @@ public class UserMealWithExceed {
         this.description = description;
         this.calories = calories;
         this.exceed = exceed;
+    }
+
+    public UserMealWithExceed(UserMeal userMeal, boolean isExceed) {
+        dateTime = userMeal.getDateTime();
+        description = userMeal.getDescription();
+        calories = userMeal.getCalories();
+        exceed = isExceed;
     }
 }
