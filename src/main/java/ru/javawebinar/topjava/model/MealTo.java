@@ -1,10 +1,12 @@
 package ru.javawebinar.topjava.model;
 
+import lombok.Data;
 import lombok.ToString;
 
 import java.time.LocalDateTime;
 
 @ToString
+@Data
 public class MealTo {
     private final LocalDateTime dateTime;
 
